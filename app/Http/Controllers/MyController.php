@@ -28,5 +28,25 @@ class MyController extends Controller
         $data['num'] = $req->input('mynumber');
         return view('myview.calculate', $data);
     }
+ function submitWorkshop(Request $req)
+{
+    $data = [
+        'fname'     => $req->fname,
+        'lname'     => $req->lname,
+        'birthdate' => $req->birthdate,
+        'age'       => $req->age,
+        'gender'    => $req->gender,
+        'address'   => $req->address,
+        'color'     => $req->color,
+        'music'     => $req->music,
+        'consent'   => $req->consent,
+    ];
 
+    // handle image
+    if ($req->hasFile('photo')) {
+        $data['photo'] = $req->file('photo')->store('photos', 'public');
+    }
+
+    return view('myview.result', $data);
+}
 }

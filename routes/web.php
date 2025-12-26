@@ -13,3 +13,5 @@ Route::get('/se', function(){
 Route::get('/mycontroller', [App\Http\Controllers\MyController::class, 'index']);
 Route::get('/calculate', [App\Http\Controllers\MyController::class, 'inFo']);
 Route::post('/calculate', [App\Http\Controllers\MyController::class, 'calculate']);
+Route::post('/workshop/submit', [App\Http\Controllers\MyController::class, 'submitWorkshop'])
+     ->name('workshop.submit');

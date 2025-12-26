@@ -16,7 +16,7 @@
     </head>
     <body>
         <div class="container mt-4">
-            <h1>File Default</h1>
+            <h1>@yield('header')</h1>
             @yield('content')
         </div>
         @stack('scripts')

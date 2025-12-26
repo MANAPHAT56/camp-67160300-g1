@@ -229,15 +229,15 @@
             }
 
             // ตรวจสอบรูป
-            let photo = document.getElementById('photo');
-            if (photo.files.length === 0) {
-                photo.classList.remove('is-valid');
-                photo.classList.add('is-invalid');
-                isValid = false;
-            } else {
-                photo.classList.remove('is-invalid');
-                photo.classList.add('is-valid');
-            }
+             // let photo = document.getElementById('photo');
+  //            if (photo.files.length === 0) {
+      //            photo.classList.remove('is-valid');
+          //        photo.classList.add('is-invalid');
+             //     isValid = false;
+             // } else {
+                 // photo.classList.remove('is-invalid');
+                 // photo.classList.add('is-valid');
+             // }
 
             // ตรวจสอบที่อยู่
             let address = document.getElementById('address');
